@@ -5,10 +5,10 @@ This project uses the **ConfigParser** library, which reads variables from a con
 
 Add a `config.py` file to the root with the following variables (include headers in [ ]:
 
-####[SQLAlchemy]
+#### [SQLAlchemy]
 * SQLALCHEMY\_DATABASE\_URI
 
-####[WeatherUnderground]
+#### [WeatherUnderground]
 * WU\_STATION\_ID
 * WU\_PASSWORD
 * WU\_API\_ENDPOINT
