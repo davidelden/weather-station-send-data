@@ -1,8 +1,13 @@
 import ConfigParser, sys, serial
 from sqlalchemy import create_engine
+import os
+
+dirname = os.path.dirname(__file__)
+parent_dir = os.path.dirname(dirname)
+config_file_name = os.path.join(parent_dir, 'config.py')
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read(config_file_name)
 
 SQLALCHEMY_DATABASE_URI = config.get('SQLAlchemy', 'SQLALCHEMY_DATABASE_URI')
 

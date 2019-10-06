@@ -1,7 +1,12 @@
 import ConfigParser
+import os
+
+dirname = os.path.dirname(__file__)
+parent_dir = os.path.dirname(dirname)
+config_file_name = os.path.join(parent_dir, 'config.py')
 
 config = ConfigParser.RawConfigParser()
-config.read('config.py')
+config.read(config_file_name)
 
 WU_STATION_ID = config.get('WeatherUnderground', 'WU_STATION_ID')
 WU_PASSWORD = config.get('WeatherUnderground', 'WU_PASSWORD')
